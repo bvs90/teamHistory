@@ -1,7 +1,10 @@
-var express = require('express'),
-    app     = express();
+var express  = require('express'),
+    app      = express(),
+    mongoose = require('mongoose');
 
 var port = process.env.PORT || 3500;
+
+mongoose.connect('mongodb://localhost:27017/team-history');
 
 app.use(express.static(__dirname + '/client'));
 
