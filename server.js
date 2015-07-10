@@ -7,6 +7,8 @@ var port = process.env.PORT || 3500;
 
 databaseDao.connect('mongodb://localhost:27017/team-history');
 
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+
 app.use(express.static(__dirname + '/client'));
 
 require('./server/routes')(app);
