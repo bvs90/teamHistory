@@ -1,0 +1,13 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+}
+
+/* Web Fonts */
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
