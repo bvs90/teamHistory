@@ -7,7 +7,62 @@
   text-decoration: none;
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 400;
+  color: #333;
 }
 
 /* Web Fonts */
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+/* Home Page */
+.home {
+  height: 50vh;
+  margin-top: 25vh;
+}
+.home h1 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+.home h2 {
+  margin-bottom: 1%;
+}
+.home .team-list {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+.home ul {
+  display: flex;
+}
+.home ul li {
+  display: block;
+  padding: 4px;
+  width: 20%;
+}
+.home li a {
+  transition: all 0.75s;
+}
+.home li a:hover {
+  color: red;
+}
+
+
+/* Stats Page */
+.stats nav {
+  width: 15%;
+  height: 150vh;
+  float: left;
+  text-align: center;
+  line-height: 100vh;
+}
+.stats .widget-container {
+  display: flex;
+}
+.stats .widget {
+  border: 1px solid #f1f1f1;
+  padding: 5px;
+  width: 50%;
+  height: 50vh;
+  text-align: center;
+  line-height: 50vh;
+}
+

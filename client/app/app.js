@@ -1,5 +1,6 @@
 angular.module('teamHistory', [
-  'ui.router'
+  'ui.router',
+  'ngAnimate'
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
@@ -10,16 +11,17 @@ angular.module('teamHistory', [
       requireBase: false
     });
     
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
     
     $stateProvider
-      .state('home', {
-        url: '/home',
-        templateUrl: 'app/views/home.html'
+      .state('pick-team', {
+        url: '/',
+        templateUrl: 'app/views/pick-team.html'
       })
       .state('stats', {
-        url: '/stats/:team',
-        template: '<h1>Now on the stats page</h1>'       
+        url: '/stats',
+        templateUrl: 'app/views/main-stats.html',
+        controller: 'StatsCtrl as statsCtrl'     
       });
   
   }])
