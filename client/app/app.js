@@ -16,7 +16,8 @@ angular.module('teamHistory', [
     $stateProvider
       .state('pick-team', {
         url: '/',
-        templateUrl: 'app/views/pick-team.html'
+        templateUrl: 'app/views/pick-team.html',
+        controller: 'PickTeamCtrl as pickTeamCtrl'
       })
       .state('stats', {
         url: '/stats',
