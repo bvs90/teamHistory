@@ -14,5 +14,9 @@
     "karma-chrome-launcher": "^0.2.0",
     "mongodb": "^2.0.36",
     "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma-jasmine": "^0.3.6"
   }
 }
