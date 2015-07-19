@@ -1,9 +1,12 @@
-angular.module('teamHistory')
+angular.module('srcModule')
 
-.controller('PickTeamCtrl', [function() {
-  var pickTeam = this;
+.controller('PickTeamCtrl', ['TeamSvc', function(TeamSvc) {
+  var pickTeamCtrl = this;
   
+  pickTeamCtrl.setTeam = TeamSvc.setTeam;
   
-  
+  pickTeamCtrl.selectTeam = function(team) {
+    pickTeamCtrl.setTeam(team);
+  };
   
 }]);

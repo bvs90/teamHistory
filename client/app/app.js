@@ -1,6 +1,9 @@
 angular.module('teamHistory', [
   'ui.router',
-  'ngAnimate'
+  'ngAnimate',
+  
+  // Internal Module Dependency
+  'srcModule'
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
@@ -25,5 +28,7 @@ angular.module('teamHistory', [
         controller: 'StatsCtrl as statsCtrl'     
       });
   
-  }])
-;
+  }]);
+
+angular.module('srcModule', []);
+
