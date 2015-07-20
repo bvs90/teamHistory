@@ -1,4 +1,4 @@
-describe('thTeamPicker', function() {
+describe('TeamPicker', function() {
   var fakeTeamSvc;
   
   fakeTeamSvc = {
