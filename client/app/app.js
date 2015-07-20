@@ -17,15 +17,15 @@ angular.module('teamHistory', [
     $urlRouterProvider.otherwise('/');
     
     $stateProvider
-      .state('pick-team', {
+      .state('home', {
         url: '/',
-        templateUrl: 'app/views/pick-team.html',
-        controller: 'PickTeamCtrl as pickTeamCtrl'
+        templateUrl: 'app/views/home.html',
+        controller: 'HomeCtrl as homeCtrl'
       })
       .state('stats', {
         url: '/stats',
         templateUrl: 'app/views/main-stats.html',
-        controller: 'StatsCtrl as statsCtrl'     
+        controller: 'StatsCtrl as statsCtrl'   
       });
   
   }]);

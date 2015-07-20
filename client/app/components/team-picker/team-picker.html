@@ -1,0 +1,8 @@
+<ul>
+  <li ng-repeat="team in teamPickerCtrl.teams">
+    <a href="" ng-click="teamPickerCtrl.selectTeam(team.teamNameShort)"
+               ng-class="{'selected': team.teamNameShort === teamPickerCtrl.selectedTeam}">
+               {{ team.teamName }}
+    </a>
+  </li>
+</ul>

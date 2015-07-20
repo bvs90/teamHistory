@@ -52,8 +52,21 @@
   height: 150vh;
   float: left;
   text-align: center;
-  line-height: 100vh;
 }
+
+.stats ul {
+  height: 90vh;
+  margin-top: 10vh;
+  position: fixed;
+  text-align: center;
+  width: 15%;
+  line-height: 32px;
+}
+
+.stats .selected {
+  color: tomato;
+}
+
 .stats .widget-container {
   display: flex;
 }
