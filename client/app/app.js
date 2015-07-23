@@ -28,7 +28,7 @@ angular.module('teamHistory', [
         controller: 'StatsCtrl as statsCtrl'   
       });
   
-  }]);
+}]);
 
 angular.module('srcModule', []);
 

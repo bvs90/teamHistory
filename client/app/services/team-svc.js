@@ -1,6 +1,6 @@
 angular.module('srcModule')
 
-.service('TeamSvc', ['$window', '$q', function($window, $q) {
+.service('TeamSvc', ['$window', function($window) {
   var teamSvc = this;
   
   teamSvc.getTeam = function() {

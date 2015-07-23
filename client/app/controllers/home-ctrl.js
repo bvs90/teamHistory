@@ -1,6 +1,6 @@
 angular.module('srcModule')
 
-.controller('HomeCtrl', ['$rootScope', 'TeamSvc', function($rootScope, TeamSvc) {
+.controller('HomeCtrl', ['TeamSvc', function(TeamSvc) {
   var homeCtrl = this;
 
   homeCtrl.setTeam = TeamSvc.setTeam;

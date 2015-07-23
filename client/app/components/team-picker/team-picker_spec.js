@@ -1,23 +1,30 @@
 describe('TeamPicker', function() {
-  var fakeTeamSvc;
+  var fakeTeamSvc,
+      fakeTeam;
+  
+  fakeTeam = 'team';
   
   fakeTeamSvc = {
     setTeam : angular.noop,
-    getTeam : angular.noop
+    getTeam : function() {
+      return fakeTeam;
+    }
   };
   
   beforeEach(module('srcModule'));
-  
+
   beforeEach(inject(function($controller) {
     teamPickerCtrl = $controller('TeamPickerCtrl', {
       TeamSvc : fakeTeamSvc
     });
   }));
   
+  it('should be intialised with the selected team', function() {
+    expect(teamPickerCtrl.selectedTeam).toBe(fakeTeam);    
+  });
+  
   it('should set the picked team', function() {
     spyOn(teamPickerCtrl, 'setTeam');
-    
-    var fakeTeam = 'team';
     
     teamPickerCtrl.selectTeam(fakeTeam);
     expect(teamPickerCtrl.setTeam).toHaveBeenCalledWith(fakeTeam);
