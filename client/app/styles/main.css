@@ -34,7 +34,8 @@
 .home ul li.app-branding img {
   -webkit-filter: none;
   filter: none;
-  max-height: 225px;
+  max-height: 25vh;
+  margin-top: 2%;
 }
 
 

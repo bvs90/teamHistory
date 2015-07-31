@@ -1,110 +1,34 @@
 <section class="home">
-  <!-- <h1>English Premier League Team History</h1> -->
-  
-<!--   <div class="team-list">
-    <h2>Pick a Team</h2>
-    <ul>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('ARS')">Arsenal</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('ASV')">Aston Villa</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('BOU')">Bournemouth</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('CHE')">Chelsea</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('CPA')">Crystal Palace</a></li>
-    </ul>
-    <ul>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('EVT')">Everton</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('LEI')">Leicester City</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('LIV')">Liverpool</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('MCY')">Manchester City</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('MUN')">Manchester United</a></li>
-    </ul>
-    <ul>  
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('NEW')">Newcastle United</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('NOC')">Norwich City</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('SOU')">Southampton</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('STK')">Stoke City</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('SUN')">Sunderland</a></li>
-    </ul>
-    <ul>  
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('SWA')">Swansea City</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('TOT')">Tottenham Hotspur</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('WAT')">Watford</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('WBA')">West Bromwich Albion</a></li>
-      <li><a ui-sref="stats" ng-click="homeCtrl.selectTeam('WHU')">West Ham United</a></li>
-    </ul>
-  </div> -->
+  <ul>
+    <li ng-repeat="team in homeCtrl.teamList[0]">
+      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamShort)">
+        <img ng-src="../app/assets/img/{{ team.teamName }}.png">
+      </a>
+    </li>
+  </ul>
   
   <ul>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('ARS')"><img ng-src="../app/assets/img/Arsenal.png"></a>
-    </li>
-    <li>
-      <a a ui-sref="stats" ng-click="homeCtrl.selectTeam('ASV')"><img ng-src="../app/assets/img/Aston_Villa.png"></a>
-    </li>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('BOU')"><img ng-src="../app/assets/img/Bournemouth.png"></a>
-    </li>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('CHE')"><img ng-src="../app/assets/img/Chelsea.png"></a>
-    </li>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('CPA')"><img ng-src="../app/assets/img/Crystal_Palace.png"></a>
-    </li>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('EVT')"><img ng-src="../app/assets/img/Everton.png"></a>
-    </li>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('LEI')"><img ng-src="../app/assets/img/Leicester_City.png"></a>
-    </li>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('LIV')"><img ng-src="../app/assets/img/Liverpool.png"></a>
-    </li>
-  </ul>  
-
-  <ul>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('MCY')"><img ng-src="../app/assets/img/Manchester_City.png"></a>
-    </li>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('MUN')"><img ng-src="../app/assets/img/Manchester_United.png"></a>
+    <li ng-repeat="team in homeCtrl.teamList[1]">
+      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamShort)">
+        <img ng-src="../app/assets/img/{{ team.teamName }}.png">
+      </a>
     </li>
     <li class="app-branding">
       <h1>Team History - English Premier League</h1>
       <img src="../app/assets/img/Premier_League.png">
     </li>
-    <li>
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam('NEW')"><img ng-src="../app/assets/img/Newcastle_United.png"></a>
-    </li>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/Norwich_City.png"></a>
+    <li ng-repeat="team in homeCtrl.teamList[2]">
+      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamShort)">
+        <img ng-src="../app/assets/img/{{ team.teamName }}.png">
+      </a>
     </li>
   </ul> 
 
   <ul>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/Southampton.png"></a>
+    <li ng-repeat="team in homeCtrl.teamList[3]">
+      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamShort)">
+        <img ng-src="../app/assets/img/{{ team.teamName }}.png">
+      </a>
     </li>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/Stoke_City.png"></a>
-    </li>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/Sunderland.png"></a>
-    </li>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/Swansea_City.png"></a>
-    </li>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/Tottenham_Hotspur.png"></a>
-    </li>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/Watford.png"></a>
-    </li>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/West_Bromwich_Albion.png"></a>
-    </li>
-    <li>
-      <a href=""><img ng-src="../app/assets/img/West_Ham_United.png"></a>
-    </li>
-  </ul> 
-  
-  
+  </ul>
 </section>
