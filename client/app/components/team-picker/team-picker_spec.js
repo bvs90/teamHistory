@@ -5,10 +5,11 @@ describe('TeamPicker', function() {
   fakeTeam = 'team';
   
   fakeTeamSvc = {
-    setTeam : angular.noop,
-    getTeam : function() {
+    setTeam     : angular.noop,
+    getTeam     : function() {
       return fakeTeam;
-    }
+    },
+    getTeamList : angular.noop
   };
   
   beforeEach(module('srcModule'));

@@ -30,7 +30,7 @@ angular.module('srcModule')
     ],
     [
       { teamName: 'Southampton', teamShort: 'SOU'},
-      { teamName: 'Stoke_City', teamShort: 'STK'},
+      { teamName: 'Stoke_City', teamShort: 'STO'},
       { teamName: 'Sunderland', teamShort: 'SUN'},
       { teamName: 'Swansea_City', teamShort: 'SWA'},
       { teamName: 'Tottenham_Hotspur', teamShort: 'TOT'},
@@ -42,4 +42,5 @@ angular.module('srcModule')
   
   
 }])
+
 ;
