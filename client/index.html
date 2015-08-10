@@ -7,6 +7,7 @@
   <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
   <script src="../bower_components/angular-animate/angular-animate.js"></script>
+  <script src="../bower_components/ramda/dist/ramda.js"></script>
   
   <link rel="stylesheet" href="./app/styles/main.css">  
 </head>
@@ -17,13 +18,18 @@
   <script src="./app/app.js"></script>
   
   <!-- Controllers -->
-  <script src="./app/controllers/home-ctrl.js"></script>
-  <script src="./app/controllers/stats-ctrl.js"></script>
+  <script src="./app/controllers/controllers.js"></script>
+  <script src="./app/controllers/home/home-ctrl.js"></script>
+  <script src="./app/controllers/stats/stats-ctrl.js"></script>
   
   <!-- Services -->
-  <script src="./app/services/team-svc.js"></script>
+  <script src="./app/services/services.js"></script>
+  <script src="./app/services/team-svc/team-svc.js"></script>
+  <script src="./app/services/vendor/ramda.js"></script>
+  
   
   <!-- Components -->
+  <script src="./app/components/components.js"></script>
   <script src="./app/components/team-picker/team-picker.js"></script>
   
 </body>

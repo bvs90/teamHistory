@@ -1,4 +1,4 @@
-angular.module('srcModule')
+angular.module('app.components.teamPicker', [])
 
 .directive('teamPicker', [function() {
   return {

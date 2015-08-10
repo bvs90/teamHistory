@@ -1,4 +1,4 @@
-angular.module('srcModule')
+angular.module('app.services.teamSvc', [])
 
 .service('TeamSvc', ['$window', function($window) {
   var teamSvc = this;
@@ -46,7 +46,7 @@ angular.module('srcModule')
       teamNameShort : 'SUN' },
     { teamName      : 'Swansea City', 
       teamNameShort : 'SWA' },
-    { teamName      : 'Totenham Hotspur', 
+    { teamName      : 'Tottenham Hotspur', 
       teamNameShort : 'TOT' },
     { teamName      : 'Watford', 
       teamNameShort : 'WAT' },

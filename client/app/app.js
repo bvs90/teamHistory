@@ -3,7 +3,10 @@ angular.module('teamHistory', [
   'ngAnimate',
   
   // Internal Module Dependency
-  'srcModule'
+  'app.controllers',
+  'app.services',
+  'app.components',
+  'app.vendor'
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
@@ -29,6 +32,3 @@ angular.module('teamHistory', [
       });
   
 }]);
-
-angular.module('srcModule', []);
-

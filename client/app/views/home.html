@@ -1,15 +1,15 @@
 <section class="home">
   <ul>
-    <li ng-repeat="team in homeCtrl.teamList[0]">
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamShort)">
+    <li ng-repeat="team in homeCtrl.teams[0]">
+      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamNameShort)">
         <img ng-src="../app/assets/img/{{ team.teamName }}.png">
       </a>
     </li>
   </ul>
   
   <ul>
-    <li ng-repeat="team in homeCtrl.teamList[1]">
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamShort)">
+    <li ng-repeat="team in homeCtrl.teams[1]">
+      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamNameShort)">
         <img ng-src="../app/assets/img/{{ team.teamName }}.png">
       </a>
     </li>
@@ -17,16 +17,16 @@
       <h1>Team History - English Premier League</h1>
       <img src="../app/assets/img/Premier_League.png">
     </li>
-    <li ng-repeat="team in homeCtrl.teamList[2]">
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamShort)">
+    <li ng-repeat="team in homeCtrl.teams[2]">
+      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamNameShort)">
         <img ng-src="../app/assets/img/{{ team.teamName }}.png">
       </a>
     </li>
   </ul> 
 
   <ul>
-    <li ng-repeat="team in homeCtrl.teamList[3]">
-      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamShort)">
+    <li ng-repeat="team in homeCtrl.teams[3]">
+      <a ui-sref="stats" ng-click="homeCtrl.selectTeam(team.teamNameShort)">
         <img ng-src="../app/assets/img/{{ team.teamName }}.png">
       </a>
     </li>

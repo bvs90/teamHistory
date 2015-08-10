@@ -12,7 +12,7 @@ describe('TeamPicker', function() {
     getTeamList : angular.noop
   };
   
-  beforeEach(module('srcModule'));
+  beforeEach(module('app.components.teamPicker'));
 
   beforeEach(inject(function($controller) {
     teamPickerCtrl = $controller('TeamPickerCtrl', {
