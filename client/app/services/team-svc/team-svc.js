@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('app.services.teamSvc', [])
 
 .service('TeamSvc', ['$window', function($window) {

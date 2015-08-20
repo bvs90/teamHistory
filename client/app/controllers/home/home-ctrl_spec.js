@@ -1,4 +1,4 @@
-fdescribe('HomeCtrl', function() {
+describe('HomeCtrl', function() {
   var homeCtrl,
       fakeTeamSvc;
   

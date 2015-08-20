@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('app.components.teamPicker', [])
 
 .directive('teamPicker', [function() {
@@ -8,16 +10,17 @@ angular.module('app.components.teamPicker', [])
   };
 }])
 
-.controller('TeamPickerCtrl', ['TeamSvc', function(TeamSvc) {
+.controller('TeamPickerCtrl', ['TeamSvc', 'TeamDataSvc', function(TeamSvc, TeamDataSvc) {
   var teamPickerCtrl = this;
 
   teamPickerCtrl.setTeam = TeamSvc.setTeam;
   
   teamPickerCtrl.selectedTeam = TeamSvc.getTeam();
-
+  
   teamPickerCtrl.selectTeam = function(team) {
     teamPickerCtrl.setTeam(team);
     teamPickerCtrl.selectedTeam = team;
+    TeamDataSvc.fetchTeamData(team);
   };  
 
   teamPickerCtrl.teams = TeamSvc.getTeamList();

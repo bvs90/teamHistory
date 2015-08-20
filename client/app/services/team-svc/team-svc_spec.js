@@ -3,7 +3,7 @@ describe('TeamSvc', function() {
   
   fakeTeam = 'fakeTeam';
   
-  beforeEach(module('srcModule'));
+  beforeEach(module('app.services.teamSvc'));
   
   beforeEach(inject(function(_TeamSvc_, _$window_) {
     teamSvc = _TeamSvc_;

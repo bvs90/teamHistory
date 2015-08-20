@@ -1,5 +1,9 @@
+'use strict';
+
 describe('TeamPicker', function() {
-  var fakeTeamSvc,
+  var teamPickerCtrl,
+      fakeTeamSvc,
+      fakeTeamDataSvc,
       fakeTeam;
   
   fakeTeam = 'team';
@@ -12,11 +16,16 @@ describe('TeamPicker', function() {
     getTeamList : angular.noop
   };
   
+  fakeTeamDataSvc = {
+    fetchTeamData : angular.noop
+  };
+  
   beforeEach(module('app.components.teamPicker'));
 
   beforeEach(inject(function($controller) {
     teamPickerCtrl = $controller('TeamPickerCtrl', {
-      TeamSvc : fakeTeamSvc
+      TeamSvc : fakeTeamSvc,
+      TeamDataSvc : fakeTeamDataSvc
     });
   }));
   
@@ -24,11 +33,28 @@ describe('TeamPicker', function() {
     expect(teamPickerCtrl.selectedTeam).toBe(fakeTeam);    
   });
   
-  it('should set the picked team', function() {
-    spyOn(teamPickerCtrl, 'setTeam');
+  describe('selectTeam method', function() {
+    it('should set the selected team to session storage', function() {
+      spyOn(teamPickerCtrl, 'setTeam');
+      
+      teamPickerCtrl.selectTeam(fakeTeam);
+      expect(teamPickerCtrl.setTeam).toHaveBeenCalledWith(fakeTeam);
+    });
     
-    teamPickerCtrl.selectTeam(fakeTeam);
-    expect(teamPickerCtrl.setTeam).toHaveBeenCalledWith(fakeTeam);
+    it('should update the selected team', function() {
+      var otherTeam = 'otherTeam';
+      
+      teamPickerCtrl.selectTeam(otherTeam);
+      expect(teamPickerCtrl.selectedTeam).toBe(otherTeam);
+    });
+    
+    it('should initiate a request for data', function() {
+      spyOn(fakeTeamDataSvc, 'fetchTeamData');
+      
+      teamPickerCtrl.selectTeam(fakeTeam);
+      expect(fakeTeamDataSvc.fetchTeamData).toHaveBeenCalledWith(fakeTeam);
+    });    
+    
   });
   
 });
